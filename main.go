@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
-	csv := &app.CsvReader{}
-	app.ReadQuestions(csv)
+	csv := app.CsvReader{
+		Filename: "problems.csv",
+	}
+	app.ReadQuestions(&csv)
 }
