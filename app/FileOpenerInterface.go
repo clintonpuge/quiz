@@ -1,5 +1,6 @@
 package app
 
-type fileOpener interface {
+// FileOpener interface
+type FileOpener interface {
 	open()
 }

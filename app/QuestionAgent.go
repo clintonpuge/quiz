@@ -1,6 +1,6 @@
 package app
 
 // ReadQuestions dsa
-func ReadQuestions(file fileOpener) {
+func ReadQuestions(file FileOpener) {
 	file.open()
 }
