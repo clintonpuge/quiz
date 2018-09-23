@@ -46,10 +46,10 @@ func (c *CsvReader) read() {
 	fmt.Printf("You scored %d out of %d.\n", correct, len(problems))
 }
 
-func parseLines(lines [][]string) []problem {
-	ret := make([]problem, len(lines))
+func parseLines(lines [][]string) []Problem {
+	ret := make([]Problem, len(lines))
 	for i, line := range lines {
-		ret[i] = problem{
+		ret[i] = Problem{
 			q: line[0],
 			a: strings.TrimSpace(line[1]),
 		}
@@ -57,7 +57,8 @@ func parseLines(lines [][]string) []problem {
 	return ret
 }
 
-type problem struct {
+// Problem consist of question and answer
+type Problem struct {
 	q string
 	a string
 }
